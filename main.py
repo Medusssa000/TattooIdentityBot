@@ -319,6 +319,8 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # Запуск
+print(f"TOKEN exists: {TOKEN is not None}")
+print(f"TOKEN length: {len(TOKEN) if TOKEN else 0}")
 app = ApplicationBuilder().token(TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
